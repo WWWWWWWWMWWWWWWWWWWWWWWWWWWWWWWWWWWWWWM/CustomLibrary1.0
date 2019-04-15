@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\CustomLibrary">
+      <UniqueIdentifier>{9c726690-1eea-4441-8d06-3de0f1f214c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CustomLibrary\CustomSDL">
+      <UniqueIdentifier>{6c2772e4-0f77-48c2-8644-6ad21d673905}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\Client.h">
+      <Filter>Header Files\CustomLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\Coder.h">
+      <Filter>Header Files\CustomLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\Display2.0.h">
+      <Filter>Header Files\CustomLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\Equation2.0.h">
+      <Filter>Header Files\CustomLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\Error.h">
+      <Filter>Header Files\CustomLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\Graph.h">
+      <Filter>Header Files\CustomLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\Input.h">
+      <Filter>Header Files\CustomLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\Matrix.h">
+      <Filter>Header Files\CustomLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\MatrixMath2.1.h">
+      <Filter>Header Files\CustomLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\NeuralNet3.1.h">
+      <Filter>Header Files\CustomLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\RandomGenerator.h">
+      <Filter>Header Files\CustomLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\SSLClient.h">
+      <Filter>Header Files\CustomLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\Timer.h">
+      <Filter>Header Files\CustomLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\UnitConvertison.h">
+      <Filter>Header Files\CustomLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\utility.h">
+      <Filter>Header Files\CustomLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\Vector.h">
+      <Filter>Header Files\CustomLibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\CustomSDL\C_Engine.h">
+      <Filter>Header Files\CustomLibrary\CustomSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\CustomSDL\C_EngineRef.h">
+      <Filter>Header Files\CustomLibrary\CustomSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\CustomSDL\C_EventManager.h">
+      <Filter>Header Files\CustomLibrary\CustomSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\CustomSDL\File.h">
+      <Filter>Header Files\CustomLibrary\CustomSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\CustomSDL\Object.h">
+      <Filter>Header Files\CustomLibrary\CustomSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\CustomSDL\Timer.h">
+      <Filter>Header Files\CustomLibrary\CustomSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\CustomSDL\C_Audio.h">
+      <Filter>Header Files\CustomLibrary\CustomSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\CustomSDL\C_Button.h">
+      <Filter>Header Files\CustomLibrary\CustomSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\CustomSDL\C_Collider.h">
+      <Filter>Header Files\CustomLibrary\CustomSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\CustomSDL\C_GeometricShape.h">
+      <Filter>Header Files\CustomLibrary\CustomSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\CustomSDL\C_Image.h">
+      <Filter>Header Files\CustomLibrary\CustomSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\CustomSDL\C_Input.h">
+      <Filter>Header Files\CustomLibrary\CustomSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\CustomSDL\C_Music.h">
+      <Filter>Header Files\CustomLibrary\CustomSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\CustomSDL\C_Option.h">
+      <Filter>Header Files\CustomLibrary\CustomSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\CustomSDL\C_SimpleTexture.h">
+      <Filter>Header Files\CustomLibrary\CustomSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\CustomSDL\C_SoundChunk.h">
+      <Filter>Header Files\CustomLibrary\CustomSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\CustomSDL\C_Text.h">
+      <Filter>Header Files\CustomLibrary\CustomSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\CustomSDL\GL_Shader.h">
+      <Filter>Header Files\CustomLibrary\CustomSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\CustomSDL\Morph.h">
+      <Filter>Header Files\CustomLibrary\CustomSDL</Filter>
+    </ClInclude>
+    <ClInclude Include="CustomLibrary\CustomLibrary\CustomSDL\OpenGLWindow.h">
+      <Filter>Header Files\CustomLibrary\CustomSDL</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomLibrary1.0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
