@@ -1,12 +1,8 @@
 #pragma once
 
-#include <iostream>
 #include <vector>
-#include <algorithm>
-#include <array>
 #include <queue>
-
-#include "Error.h"
+#include <tuple>
 
 namespace ctl
 {
@@ -31,6 +27,7 @@ namespace ctl
 		std::vector<bool>& _goThrough_(std::vector<bool> &check, const Vertex &nextNode = 0) const
 		{
 			check[nextNode] = true;
+			//Find node that's not been activated and recurse to it. If none found go back in stack.
 			for (auto& i : m_adjList[nextNode])
 				if (!check[i.second])
 					_goThrough_(check, i.second);
@@ -62,6 +59,7 @@ namespace ctl
 				pq.pop();
 				visited[current] = true;
 
+				//Check if vertex is marked and new calculated distance is lower than the currently saved one.
 				for (const auto &x : m_adjList[current])
 					if (!visited[x.second] && dist[x.second] > dist[current] + x.first)
 					{
@@ -75,6 +73,7 @@ namespace ctl
 
 		auto dijkstraWPath(const Vertex &start) const
 		{
+			//Same as only distance dijkstra
 			std::priority_queue<DestEdge, std::vector<DestEdge>, std::greater<DestEdge>> pq;
 			std::vector<double> dist(m_adjList.size(), std::numeric_limits<double>::max());
 			std::vector<bool> visited(m_adjList.size(), false);
@@ -83,6 +82,7 @@ namespace ctl
 
 			pq.emplace(0., start);
 			dist[start] = 0.;
+			//0 vertex points to nothing
 			path.front() = -1;
 
 			while (!pq.empty())
@@ -96,6 +96,7 @@ namespace ctl
 					{
 						dist[x.second] = dist[current] + x.first;
 						pq.emplace(dist[x.second], x.second);
+						
 						path[x.second] = current;
 					}
 			}
@@ -168,6 +169,7 @@ namespace ctl
 			return *this;
 		}
 
+		//Reserse directions of edges
 		Graph transpose() const
 		{
 			Graph out;
@@ -213,10 +215,10 @@ namespace ctl
 
 			uint8_t odds = 0;
 			for (auto& i : m_adjList)
-				if (i.size() & 1)
+				if (i.size() & 1) //if divisable by 2
 				{
 					++odds;
-					if (odds > 2)
+					if (odds > 2) //no point continuing
 						return NONE;
 				}
 
@@ -234,6 +236,7 @@ namespace ctl
 			if (m_adjList.size() < max)
 				m_adjList.resize(max);
 
+			//In undirected graph it points in 2 directions
 			m_adjList[std::get<0>(e)].emplace_back(std::get<2>(e), std::get<1>(e));
 			m_adjList[std::get<1>(e)].emplace_back(std::get<2>(e), std::get<0>(e));
 
@@ -246,6 +249,7 @@ namespace ctl
 			std::vector<double> key(m_adjList.size(), std::numeric_limits<double>::max());
 			std::vector<bool> inMST(m_adjList.size(), false);
 
+			//Path for new graph
 			std::vector<DestEdge> parent(m_adjList.size());
 
 			pq.emplace(0., 0);
