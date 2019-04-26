@@ -32,8 +32,8 @@ namespace ctl
 		constexpr SDL_Point to_SDL_Point() const { return SDL_Point{ m_m[0], m_m[1] }; }
 #endif // SDL_h_
 
-		constexpr auto& operator[](const int &x) { return m_m.at(x); }
-		constexpr const auto& operator[](const int &x) const { return m_m.at(x); }
+		constexpr auto& operator[](const size_t &x) { return m_m.at(x); }
+		constexpr const auto& operator[](const size_t &x) const { return m_m.at(x); }
 
 		constexpr auto& operator+=(const NumVec<TypeNum, sizeArray> &v)
 		{

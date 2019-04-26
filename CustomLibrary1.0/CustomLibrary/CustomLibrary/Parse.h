@@ -28,7 +28,7 @@ namespace ctl
 
 	//ctl::getline, but string includes ending
 	template<class CharT, class Traits, class Allocator>
-	auto& getlineWEnd(std::basic_istream<CharT, Traits>& input, std::basic_string<CharT, Traits, Allocator>& str, const std::initializer_list<CharT> delim)
+	auto& getlineWEnd(std::basic_istream<CharT, Traits>& input, std::basic_string<CharT, Traits, Allocator>& str, const std::initializer_list<CharT> &delim)
 	{
 		str.erase();
 		for (char ch; input.get(ch);)

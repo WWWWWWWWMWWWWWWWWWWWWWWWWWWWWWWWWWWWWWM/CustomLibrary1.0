@@ -35,7 +35,7 @@ namespace ctl
 				return std::uniform_int_distribution<>(min, max)(m_gen);
 		}
 
-		template<typename Iter/*, typename = typename std::enable_if<std::is_same<std::input_iterator_tag, T>::value>::type*/>
+		template<typename Iter, typename = typename std::enable_if_t<!std::is_same_v<typename std::iterator_traits<Iter>::type_value, void>>>
 		constexpr Iter randIter(Iter first, const Iter &last)
 		{
 			std::advance(first, randNumber<size_t>(0, std::distance(first, last) - 1));
