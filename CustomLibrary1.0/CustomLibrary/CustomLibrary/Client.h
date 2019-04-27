@@ -36,7 +36,8 @@ namespace ctl
 
 			//Start an asynchronous resolve for endpoints
 			tcp::resolver::query q(server, "http");
-			m_resolver.async_resolve(q, std::bind(&Client::_resolve_, this, std::placeholders::_1, std::placeholders::_2));
+			m_resolver.async_resolve(q, 
+				std::bind(&Client::_resolve_, this, std::placeholders::_1, std::placeholders::_2));
 		}
 
 		//Handle closing
